@@ -1,10 +1,10 @@
-package pe.lacafeta.application.skeleton;
+package pe.lacafetalab.application;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SkeletonApplicationTests {
+class StarterTests {
 
     @Test
     void contextLoads() {
