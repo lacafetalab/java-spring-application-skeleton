@@ -4,8 +4,8 @@ allprojects {
     apply plugin: 'io.spring.dependency-management'
     apply plugin: 'org.springframework.boot'
 
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
+    sourceCompatibility = '11'
+    targetCompatibility = '11'
 
     repositories {
         mavenCentral()
@@ -15,6 +15,12 @@ allprojects {
         // Prod
         implementation 'org.apache.logging.log4j:log4j-core:2.12.1'
         implementation 'com.vlkan.log4j2:log4j2-logstash-layout:0.21'
+
+
+
+        compileOnly 'org.projectlombok:lombok'
+        runtimeOnly 'com.h2database:h2'
+        annotationProcessor 'org.projectlombok:lombok'
 
         // Test
         testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
