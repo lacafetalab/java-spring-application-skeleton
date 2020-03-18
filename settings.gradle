@@ -1,4 +1,4 @@
-rootProject.name = 'skeleton'
+rootProject.name = 'pao-feedback'
 
 include ':applications'
 project(':applications').projectDir = new File('applications')
@@ -6,5 +6,5 @@ project(':applications').projectDir = new File('applications')
 include ':shared'
 project(':shared').projectDir = new File('src/shared')
 
-include ':autentication'
-project(':autentication').projectDir = new File('src/autentication')
+include ':manage'
+project(':manage').projectDir = new File('src/manage')
