@@ -4,8 +4,8 @@ allprojects {
     apply plugin: 'io.spring.dependency-management'
     apply plugin: 'org.springframework.boot'
 
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
+    sourceCompatibility = 11
+    targetCompatibility = 11
 
     repositories {
         mavenCentral()
@@ -29,16 +29,7 @@ allprojects {
             events "passed", "skipped", "failed"
         }
     }
-    
-    sourceSets {
-        main {
-            java { srcDirs = [ 'main' ] }
-            resources { srcDir 'resources' }
-        }
-        test {
-            java { srcDirs = [ 'test' ] }
-        }
-    }
+
 
     task view_paths {
         doLast { task ->
@@ -56,7 +47,17 @@ allprojects {
 subprojects {
     group = "pe.lacafetalab.application.${rootProject.name}"
 
-    
+    sourceSets {
+        main {
+            java { srcDirs = ['main'] }
+            resources { srcDirs = ['main/resources'] }
+        }
+
+        test {
+            java { srcDirs = ['test'] }
+            resources { srcDirs = ['test/resources'] }
+        }
+    }
 
     dependencies {
         implementation 'org.springframework.boot:spring-boot-starter-web:2.1.8.RELEASE'
@@ -86,6 +87,18 @@ buildscript {
     }
     dependencies {
         classpath('org.springframework.boot:spring-boot-gradle-plugin:2.2.1.RELEASE')
+    }
+}
+
+sourceSets {
+    main {
+        java { srcDirs = ['apps'] }
+        resources { srcDirs = ['apps/main/resources'] }
+    }
+
+    test {
+        java { srcDirs = ['apps'] }
+        resources { srcDirs = ['apps/test/resources'] }
     }
 }
 

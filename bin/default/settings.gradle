@@ -1,10 +1,9 @@
 rootProject.name = 'skeleton'
 
-include ':applications'
-project(':applications').projectDir = new File('applications')
 
 include ':shared'
 project(':shared').projectDir = new File('src/shared')
 
 include ':autentication'
 project(':autentication').projectDir = new File('src/autentication')
+
