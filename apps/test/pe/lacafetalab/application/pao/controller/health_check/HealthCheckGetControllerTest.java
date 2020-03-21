@@ -1,4 +1,4 @@
-package pe.lacafetalab.application.autentication.controller.health_check;
+package pe.lacafetalab.application.pao.controller.health_check;
 
 
 import org.junit.jupiter.api.Test;

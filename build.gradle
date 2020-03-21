@@ -133,7 +133,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web:2.1.8.RELEASE'
 
     implementation project(":shared")
-    implementation project(":autentication")
+    implementation project(":pao")
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test:2.1.8.RELEASE'
     testImplementation project(":shared").sourceSets.test.output

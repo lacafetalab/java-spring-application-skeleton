@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({"pe.lacafetalab.application", "pe.lacafetalab.autentication"})
+@ComponentScan({"pe.lacafetalab.application", "pe.lacafetalab.pao"})
 public class Starter {
 
     public static void main(String[] args) {

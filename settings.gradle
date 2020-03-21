@@ -4,6 +4,6 @@ rootProject.name = 'skeleton'
 include ':shared'
 project(':shared').projectDir = new File('src/shared')
 
-include ':autentication'
-project(':autentication').projectDir = new File('src/autentication')
+include ':pao'
+project(':pao').projectDir = new File('src/pao')
 
