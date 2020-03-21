@@ -6,11 +6,19 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import pe.lacafetalab.pao.courses.application.create.CourseCreator;
 
 @RestController
 public final class CoursesPutController {
+    private CourseCreator creator;
+
+    public CoursesPutController(CourseCreator creator) {
+        this.creator = creator;
+    }
+
     @PutMapping("/courses/{id}")
-    public ResponseEntity create(@PathVariable String id, @RequestBody Request request){
+    public ResponseEntity create(@PathVariable String id, @RequestBody Request request) {
+        this.creator.create(id, request.getName(), request.getDuration());
         return new ResponseEntity(HttpStatus.CREATED);
 
     }
