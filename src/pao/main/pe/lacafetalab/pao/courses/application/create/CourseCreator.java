@@ -3,8 +3,7 @@ package pe.lacafetalab.pao.courses.application.create;
 //import pe.lacafetalab.shared.domain.Service;
 
 import org.springframework.stereotype.Service;
-import pe.lacafetalab.pao.courses.domain.Course;
-import pe.lacafetalab.pao.courses.domain.CourseRepository;
+import pe.lacafetalab.pao.courses.domain.*;
 
 @Service
 public final class CourseCreator {
@@ -14,9 +13,12 @@ public final class CourseCreator {
         this.repository = repository;
     }
 
-    public void create(String id, String name, String duration) {
+    public void create(CreateCourseRequest request) {
 
-        Course course = new Course(id,name,duration);
+        Course course = new Course(
+                new CourseId(request.id()),
+                new CourseName(request.name()),
+                new CourseDuration(request.duration()));
 
         this.repository.save(course);
 
