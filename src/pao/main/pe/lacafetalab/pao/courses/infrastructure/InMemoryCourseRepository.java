@@ -2,6 +2,7 @@ package pe.lacafetalab.pao.courses.infrastructure;
 
 import org.springframework.stereotype.Service;
 import pe.lacafetalab.pao.courses.domain.Course;
+import pe.lacafetalab.pao.courses.domain.CourseId;
 import pe.lacafetalab.pao.courses.domain.CourseRepository;
 
 import java.util.HashMap;
@@ -16,7 +17,7 @@ public class InMemoryCourseRepository implements CourseRepository {
     }
 
     @Override
-    public Optional<Course> search(String id) {
-        return Optional.ofNullable(courses.get(id));
+    public Optional<Course> search(CourseId id) {
+        return Optional.ofNullable(courses.get(id.value()));
     }
 }

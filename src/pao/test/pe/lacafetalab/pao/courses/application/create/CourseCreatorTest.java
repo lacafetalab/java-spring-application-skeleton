@@ -13,13 +13,11 @@ class CourseCreatorTest {
         CourseRepository repository = mock(CourseRepository.class);
         CourseCreator creator = new CourseCreator(repository);
 
-        Course course = new Course(
-                new CourseId("a6c360f7-e8f4-43d8-a9bf-3e47bbeb71e7"),
-                new CourseName("some-name"),
-                new CourseDuration("some-duration")
-        );
+        CreateCourseRequest request = CreateCourseRequestMother.random();
 
-        creator.create(new CreateCourseRequest(course.id().value(), course.name().value(), course.duration().value()));
+        Course course = CourseMother.fromRequest(request);
+
+        creator.create(request);
 
         verify(repository, atLeastOnce()).save(course);
     }
