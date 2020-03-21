@@ -1,4 +1,4 @@
-package pe.lacafetalab.application.pao.controller.courses;
+package pe.lacafetalab.apps.pao.controller.courses;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

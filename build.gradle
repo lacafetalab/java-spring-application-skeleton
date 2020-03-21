@@ -64,7 +64,7 @@ allprojects {
 
 // All subprojects (located in src/*)
 subprojects {
-    group = "pe.lacafetalab.application.${rootProject.name}"
+    group = "pe.lacafetalab.${rootProject.name}"
 
     sourceSets {
         main {
@@ -128,7 +128,7 @@ bootJar {
     version = '0.0.1'
 }
 
-mainClassName = 'pe.lacafetalab.application.Starter'
+mainClassName = 'pe.lacafetalab.apps.Starter'
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web:2.1.8.RELEASE'

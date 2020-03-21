@@ -1,8 +1,8 @@
-package pe.lacafetalab.application.pao.controller.health_check;
+package pe.lacafetalab.apps.pao.controller.health_check;
 
 
 import org.junit.jupiter.api.Test;
-import pe.lacafetalab.application.RequestTestCase;
+import pe.lacafetalab.apps.RequestTestCase;
 
 final class HealthCheckGetControllerTest extends RequestTestCase {
     @Test

@@ -1,4 +1,4 @@
-package pe.lacafetalab.application.pao.controller.health_check;
+package pe.lacafetalab.apps.pao.controller.health_check;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

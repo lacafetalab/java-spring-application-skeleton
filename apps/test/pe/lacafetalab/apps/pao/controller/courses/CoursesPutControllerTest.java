@@ -1,7 +1,7 @@
-package pe.lacafetalab.application.pao.controller.courses;
+package pe.lacafetalab.apps.pao.controller.courses;
 
 import org.junit.jupiter.api.Test;
-import pe.lacafetalab.application.RequestTestCase;
+import pe.lacafetalab.apps.RequestTestCase;
 
 public final class CoursesPutControllerTest extends RequestTestCase {
     @Test
